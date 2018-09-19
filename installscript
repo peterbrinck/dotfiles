@@ -167,6 +167,110 @@ echo 'Install zsh-autosuggestions'
 echo '---------------------------'
 brew install zsh-autosuggestions
 
+echo 'Install muse'
+echo '---------------------------'
+brew cask install muse
+
+echo 'Install eqmac2'
+echo '---------------------------'
+brew cask install eqmac
+
+echo 'Install tunnelblick'
+echo '---------------------------'
+brew cask install tunnelblick
+
+echo 'Install mailspring'
+echo '---------------------------'
+brew cask install mailspring
+
+echo 'Install shiftit'
+echo '---------------------------'
+brew cask install shiftit
+
+echo 'Install karabiner-elements'
+echo '---------------------------'
+brew cask install karabiner-elements
+
+echo 'Install spotify'
+echo '---------------------------'
+brew cask install spotify
+
+echo 'Install slack'
+echo '---------------------------'
+brew cask install slack
+
+echo 'Install discord'
+echo '---------------------------'
+brew cask install discord
+
+echo 'Install iterm2'
+echo '---------------------------'
+brew cask install iterm2
+
+echo 'Install filezilla'
+echo '---------------------------'
+brew cask install filezilla
+
+echo 'Install sequel-pro'
+echo '---------------------------'
+brew cask install sequel-pro
+
+echo 'Install postman'
+echo '---------------------------'
+brew cask install postman
+
+echo 'Install sketch'
+echo '---------------------------'
+brew cask install sketch
+
+echo 'Install sketch'
+echo '---------------------------'
+brew cask install sketch
+
+echo 'Install google-chrome'
+echo '---------------------------'
+brew cask install google-chrome
+
+echo 'Install firefox'
+echo '---------------------------'
+brew cask install firefox
+
+echo 'Install tor-browser'
+echo '---------------------------'
+brew cask install tor-browser
+
+echo 'Install transmission'
+echo '---------------------------'
+brew cask install transmission
+
+echo 'Install vlc'
+echo '---------------------------'
+brew cask install vlc
+
+echo 'Install etcher'
+echo '---------------------------'
+brew cask install etcher
+
+echo 'Install appcleaner'
+echo '---------------------------'
+brew cask install appcleaner
+
+echo 'Install gnupg'
+echo '---------------------------'
+brew install gnupg
+
+echo 'Install gpg-suite'
+echo '---------------------------'
+brew cask install gpg-suite
+
+echo 'Install steam'
+echo '---------------------------'
+brew cask install steam
+
+echo 'Install libreoffice'
+echo '---------------------------'
+brew cask install libreoffice
+
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
 echo 'All done!'
@@ -177,7 +281,7 @@ echo '2. Install patched solarized theme included in ~/.dotfiles/misc'
 echo '++++++++++++++++++++++++++++++'
 echo 'Some optional tidbits'
 
-echo '1. Make sure icloud is running first. If you have not backed up via Mackup yet, then run `mackup backup` to symlink preferences for a wide collection of apps to your icloud. If you already had a backup via mackup run `mackup restore` You'll find more info on Mackup here: https://github.com/lra/mackup.'
+echo '1. Make sure icloud is running first. If you have not backed up via Mackup yet, then run `mackup backup` to symlink preferences for a wide collection of apps to your icloud. If you already had a backup via mackup run `mackup restore` You will find more info on Mackup here: https://github.com/lra/mackup.'
 echo '2. Set some sensible os x defaults by running: $HOME/.dotfiles/macos/set-defaults.sh'
 echo '3. Make a .dotfiles-custom/shell/.aliases for your personal commands'
 
