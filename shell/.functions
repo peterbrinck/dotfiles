@@ -31,7 +31,7 @@ function ql() {
    quick-look "$1"
 }
 
-archive () {
+function archive() {
    zip -r "$1".zip -i "$1" ;
 }
 
@@ -48,8 +48,6 @@ function weather() {
 
    eval "curl http://wttr.in/${city}"
 }
-
-alias mysqladm='mysql -u root'
 
 # Scrape a single webpage with all assets
 function scrapeUrl() {
@@ -68,7 +66,7 @@ function commit() {
   eval "git commit -a -m '${commitMessage}'"
 }
 
-xdebug() {
+function xdebug() {
    iniFileLocation="/usr/local/etc/php/7.2/conf.d/ext-xdebug.ini";
    
    currentLine=`cat $iniFileLocation | grep xdebug.so`

@@ -122,3 +122,4 @@ alias cask='brew cask' # i <3 u cask
 # untar
 alias untar='tar xvf'
 
+alias mysqladm='mysql -u root'
