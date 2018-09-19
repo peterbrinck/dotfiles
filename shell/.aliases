@@ -72,8 +72,20 @@ alias -- -="cd -"
 alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
+alias p="cd ~/Projects"
+
+# Git Aliases
 alias g="git"
+alias gs='git status'
+alias ga='git add -A'
+alias gp='git pull'
+alias gcam='git commit -a -m '
+alias push="git push"
+alias undopush="git push -f origin HEAD^:master"
+
+alias feature='git flow feature '
+alias release='git flow release '
+alias hotfix='git flow hotfix '
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -105,4 +117,8 @@ alias egrep='egrep --color=auto'
 # Get week number
 alias week='date +%V'
 
+alias cask='brew cask' # i <3 u cask
+
+# untar
+alias untar='tar xvf'
 

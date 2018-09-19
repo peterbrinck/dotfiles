@@ -155,9 +155,9 @@ echo 'Install yarn'
 echo '------------'
 brew install yarn
 
-echo 'Install ghostscript'
-echo '-------------------'
-brew install ghostscript
+# echo 'Install ghostscript'
+# echo '-------------------'
+# brew install ghostscript
 
 echo 'Install mackup'
 echo '--------------'
