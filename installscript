@@ -17,12 +17,6 @@ git config --global core.excludesfile $HOME/.global-gitignore
 rm $HOME/.zshrc
 ln -s $HOME/.dotfiles/shell/.zshrc $HOME/.zshrc
 
-# Symlink vim prefs
-rm $HOME/.vimrc
-ln -s $HOME/.dotfiles/shell/.vimrc $HOME/.vimrc
-rm $HOME/.vim
-ln -s $HOME/.dotfiles/shell/.vim $HOME/.vim
-
 # Symlink yarn prefs
 rm $HOME/.yarnrc
 ln -s $HOME/.dotfiles/shell/.yarnrc $HOME/.yarnrc
