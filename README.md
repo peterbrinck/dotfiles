@@ -1,6 +1,6 @@
 # My Dotfiles
 
-This is a modified fork of Freek Van der Herten's dotfiles. [freekmurze/dotfiles](https://github.com/freekmurze/dotfiles).
+This is a modified fork of Freek Van der Herten's dotfiles, [freekmurze/dotfiles](https://github.com/freekmurze/dotfiles).
 
 It contains the installation of my tools and software, some handy aliases and functions. Backups of setting are done via [Mackup](https://github.com/lra/mackup).
 
