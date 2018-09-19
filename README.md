@@ -1,10 +1,10 @@
-# My personal dotfiles
+# My Dotfiles
 
-My personal dotfiles. Also used by nearly all other geeks at [spatie.be](http://spatie.be) and [the amazing Frederick Vanbrabant](https://twitter.com/maybeFrederick/status/912620087538016257).
+This is a modified fork of Freek Van der Herten's dotfiles. [freekmurze/dotfiles](https://github.com/freekmurze/dotfiles).
 
-It contains the installation of some basic tools, some handy aliases and functions. Backups of setting are done via [Mackup](https://github.com/lra/mackup).
+It contains the installation of my tools and software, some handy aliases and functions. Backups of setting are done via [Mackup](https://github.com/lra/mackup).
 
-You can install them by cloning the repository as `.dotfiles` in your homedirectory and running the bootstrap-script.
+You can install them by cloning the repository as `.dotfiles` in your home directory and running the bootstrap-script.
 
 The bootstrap script can be run be cd-ing into the `.dotfiles` directory and performing this command:
 
