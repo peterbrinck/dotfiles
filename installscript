@@ -271,6 +271,14 @@ echo 'Install libreoffice'
 echo '---------------------------'
 brew cask install libreoffice
 
+echo 'Install htop'
+echo '---------------------------'
+brew install htop
+
+echo 'Install git-flow-avh'
+echo '---------------------------'
+brew install git-flow-avh
+
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
 echo 'All done!'
