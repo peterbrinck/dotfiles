@@ -142,6 +142,10 @@ echo '---------------------'
 composer global require laravel/valet
 valet install
 
+echo 'Install laravel'
+echo '---------------------'
+composer global require laravel/installer
+
 echo 'Install mysql'
 echo '-------------'
 brew install mysql@5.7
