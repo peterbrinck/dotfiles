@@ -1,3 +1,5 @@
+alias reload!='. ~/.zshrc'
+
 # PHP
 alias phpunit="vendor/bin/phpunit"
 alias phpunitw="phpunit-watcher watch"

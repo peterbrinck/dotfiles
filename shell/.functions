@@ -54,21 +54,9 @@ function scrapeUrl() {
     wget --adjust-extension --convert-links --page-requisites --span-hosts --no-host-directories "$1"
 }
 
-#  Commit everything
-function commit() {
-  commitMessage="$1"
-
-  if [ "$commitMessage" = "" ]; then
-     commitMessage="commit"
-  fi
-
-  git add .
-  eval "git commit -a -m '${commitMessage}'"
-}
-
 function xdebug() {
    iniFileLocation="/usr/local/etc/php/7.2/conf.d/ext-xdebug.ini";
-   
+
    currentLine=`cat $iniFileLocation | grep xdebug.so`
 
    if [[ $currentLine =~ ^#zend_extension ]];
@@ -97,4 +85,80 @@ function db {
     elif [ "$1" = "drop" ]; then
         mysql -uroot -e "drop database $2"
     fi
+}
+
+function extract () {
+    if [ -f $1 ]; then
+        case $1 in
+            *.tar.bz2)  tar -jxvf $1                        ;;
+            *.tar.gz)   tar -zxvf $1                        ;;
+            *.bz2)      bunzip2 $1                          ;;
+            *.dmg)      hdiutil mount $1                    ;;
+            *.gz)       gunzip $1                           ;;
+            *.tar)      tar -xvf $1                         ;;
+            *.tbz2)     tar -jxvf $1                        ;;
+            *.tgz)      tar -zxvf $1                        ;;
+            *.zip)      unzip $1                            ;;
+            *.ZIP)      unzip $1                            ;;
+            *.pax)      cat $1 | pax -r                     ;;
+            *.pax.Z)    uncompress $1 --stdout | pax -r     ;;
+            *.rar)      unrar x $1                          ;;
+            *.Z)        uncompress $1                       ;;
+            *)          echo "'$1' cannot be extracted/mounted via extract()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+
+# Call from a local repo to open the repository on github/bitbucket in browser
+# Modified version of https://github.com/zeke/ghwd
+function repo() {
+  # Figure out github repo base URL
+  local base_url
+  base_url=$(git config --get remote.origin.url)
+  base_url=${base_url%\.git} # remove .git from end of string
+
+  # Fix git@github.com: URLs
+  base_url=${base_url//git@github\.com:/https:\/\/github\.com\/}
+
+  # Fix git://github.com URLS
+  base_url=${base_url//git:\/\/github\.com/https:\/\/github\.com\/}
+
+  # Fix git@bitbucket.org: URLs
+  base_url=${base_url//git@bitbucket.org:/https:\/\/bitbucket\.org\/}
+
+  # Fix git@gitlab.com: URLs
+  base_url=${base_url//git@gitlab\.com:/https:\/\/gitlab\.com\/}
+
+  # Validate that this folder is a git folder
+  if ! git branch 2>/dev/null 1>&2 ; then
+    echo "Not a git repo!"
+    exit $?
+  fi
+
+  # Find current directory relative to .git parent
+  full_path=$(pwd)
+  git_base_path=$(cd "./$(git rev-parse --show-cdup)" || exit 1; pwd)
+  relative_path=${full_path#$git_base_path} # remove leading git_base_path from working directory
+
+  # If filename argument is present, append it
+  if [ "$1" ]; then
+    relative_path="$relative_path/$1"
+  fi
+
+  # Figure out current git branch
+  # git_where=$(command git symbolic-ref -q HEAD || command git name-rev --name-only --no-undefined --always HEAD) 2>/dev/null
+  git_where=$(command git name-rev --name-only --no-undefined --always HEAD) 2>/dev/null
+
+  # Remove cruft from branchname
+  branch=${git_where#refs\/heads\/}
+
+  [[ $base_url == *bitbucket* ]] && tree="src" || tree="tree"
+  url="$base_url/$tree/$branch$relative_path"
+
+
+  echo "Calling $(type open) for $url"
+
+  open "$url" &> /dev/null || (echo "Using $(type open) to open URL failed." && exit 1);
 }
