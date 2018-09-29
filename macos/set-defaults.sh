@@ -34,6 +34,12 @@ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 # Save to disk (not to iCloud) by default
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
+# Show battery percentage
+defaults write com.apple.menuextra.battery ShowPercent true
+
+# Remove recent tags
+defaults write com.apple.finder ShowRecentTags 0
+
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
