@@ -99,6 +99,8 @@ brew cask install --force qlcolorcode qlstephen qlmarkdown quicklook-json qlpret
 
 echo 'Install php'
 echo '-----------'
+brew install php@7.0
+brew install php@7.1
 brew install php@7.2
 
 echo 'Install imagemagick'
@@ -183,9 +185,9 @@ echo 'Install mailspring'
 echo '---------------------------'
 brew cask install mailspring
 
-echo 'Install shiftit'
+echo 'Install spectacle'
 echo '---------------------------'
-brew cask install shiftit
+brew cask install spectacle
 
 echo 'Install karabiner-elements'
 echo '---------------------------'
