@@ -78,7 +78,7 @@ alias p="cd ~/Projects"
 
 # Git Aliases
 alias g="git"
-alias gs='git status'
+alias gis='git status'
 alias ga='git add -A'
 alias gp='git pull'
 alias gcam='git commit -a -m '
