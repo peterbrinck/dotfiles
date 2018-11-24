@@ -293,6 +293,14 @@ echo '---------------------------'
 brew cask install sublime-text
 ln -s  "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 
+echo 'Install android-studio'
+echo '---------------------------'
+brew cask install android-studio
+
+echo 'Install android-platform-tools'
+echo '---------------------------'
+brew cask install android-platform-tools
+
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
 echo 'All done!'
