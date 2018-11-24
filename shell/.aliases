@@ -121,6 +121,8 @@ alias week='date +%V'
 
 alias cask='brew cask' # i <3 u cask
 
+alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
+
 # untar
 alias untar='tar xvf'
 
