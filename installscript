@@ -208,6 +208,10 @@ echo 'Install spotify'
 echo '---------------------------'
 brew cask install spotify
 
+echo 'Install beardedspice'
+echo '---------------------------'
+brew cask install beardedspice
+
 echo 'Install slack'
 echo '---------------------------'
 brew cask install slack
