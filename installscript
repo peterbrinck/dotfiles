@@ -55,6 +55,10 @@ echo install homebrew
 sudo rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+echo 'Install mas'
+echo '------------'
+brew install mas
+
 echo 'Install node'
 echo '-----------'
 brew install node
