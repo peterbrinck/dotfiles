@@ -108,6 +108,10 @@ echo '-----------------'
 brew tap caskroom/cask
 brew install brew-cask
 
+echo 'Allow brew to lookup versions'
+echo '-----------------'
+brew tap caskroom/versions
+
 echo 'Install some nice quicklook plugins'
 echo '-----------------------------------'
 brew cask install --force qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webp-quicklook suspicious-package
