@@ -87,11 +87,10 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 export PATH=/usr/local/bin:$PATH
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-export PATH="/usr/local/opt/node/bin:$PATH"
+# export PATH="/usr/local/opt/node/bin:$PATH"
 
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# fnm
+eval "$(fnm env --multi)"

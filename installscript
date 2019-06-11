@@ -61,6 +61,10 @@ echo 'Install node'
 echo '-----------'
 brew install node
 
+echo 'Install fnm'
+echo '-----------'
+brew install Schniz/tap/fnm
+
 echo 'Install bat'
 echo '-----------'
 brew install bat
