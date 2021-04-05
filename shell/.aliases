@@ -4,6 +4,7 @@ alias reload!='. ~/.zshrc'
 alias phpunit="vendor/bin/phpunit"
 alias phpunitw="phpunit-watcher watch"
 alias a="php artisan"
+alias ar="php artisan remote"
 alias c="composer"
 alias cu="composer update"
 alias cr="composer require"
@@ -15,9 +16,13 @@ alias deploy-code='envoy run deploy-code'
 alias mfs='php artisan migrate:fresh --seed'
 alias nah='git reset --hard;git clean -df'
 alias p="phpunit"
+alias pp="php artisan test --parallel"
 alias pf="phpunit --filter "
+alias d="php artisan dusk"
 alias sshconfig="nano ~/.ssh/config"
 alias copykey='command cat ~/.ssh/ovh.public | pbcopy'
+alias sail='./vendor/bin/sail'
+alias tunnel='valet share -subdomain=freekmurze -region=eu'
 
 # Tool replacements
 alias cat=bat
@@ -39,12 +44,17 @@ alias o="open ."
 # List all files colorized in long format
 alias l="ls -laF"
 
+# PhpStorm
+alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
+
+# Redis
+alias flush-redis="redis-cli FLUSHALL"
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
 # IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ip="curl https://diagnostic.opendns.com/myip ; echo"
 alias localip="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 
 # Flush Directory Service cache
@@ -127,3 +137,6 @@ alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 alias untar='tar xvf'
 
 alias mysqladm='mysql -u root'
+
+# Restart touch bar
+alias touchbar="killall ControlStrip"
